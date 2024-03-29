@@ -1,0 +1,21 @@
+[package]
+name = "blfilter"
+version = "0.1.0"
+resolver = "2"
+edition = "2021"
+authors = ["Jiancong Zhu <chasing1020@gmail.com>"]
+description = "Bloom filter implementation using farmhash."
+license = "Apache-2.0"
+repository = "https://github.com/Chasing1020/blfilter"
+keywords = ["bloom", "filter"]
+readme = "README.md"
+
+
+[dependencies]
+bit-vec = { version = "0.6.3", default-features = false }
+serde = { version = "1.0.197", default-features = false, optional = true }
+farmhash = "1.1.5"
+
+[features]
+default = ["std"]
+std = ["bit-vec/std", "bit-vec/serde", "serde/std"]
