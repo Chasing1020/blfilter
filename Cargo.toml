@@ -18,4 +18,4 @@ bytes = "1.0.1"
 
 [features]
 default = ["std"]
-std = ["bit-vec/std", "bit-vec/serde", "serde/std"]
+std = ["serde/std"]
